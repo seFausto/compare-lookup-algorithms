@@ -21,7 +21,7 @@ namespace CompareLookUpAlgorithms
 
             foreach (var item in items) 
             { 
-               Console.WriteLine($"{item} - {set.Contains(item)}");
+               // Console.WriteLine($"{item} - {set.Contains(item)}");
             }
 
             return true;

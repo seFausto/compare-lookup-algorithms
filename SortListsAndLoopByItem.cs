@@ -19,7 +19,7 @@ namespace CompareLookUpAlgorithms
             //for loop to go throu each item
             for (int itemCount = 0; itemCount < items.Count; itemCount++)
             {
-                Console.WriteLine($"{items[itemCount]}, {lookup[itemCount]}");
+               // Console.WriteLine($"{items[itemCount]}, {lookup[itemCount]}");
             }
 
             return true;
