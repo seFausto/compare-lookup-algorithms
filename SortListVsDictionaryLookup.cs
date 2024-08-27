@@ -12,7 +12,7 @@ public class SortListVsDictionaryLookup
         var items = new List<Guid>();
         var lookup = new List<Guid>();
 
-        for (int i = 0; i < 10000; i++)
+        for (int i = 0; i < 1_000_000; i++)
         {
             var guid = Guid.NewGuid();
             items.Add(guid);
