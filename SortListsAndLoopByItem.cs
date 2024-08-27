@@ -10,13 +10,10 @@ namespace CompareLookUpAlgorithms
     internal class SortListsAndLoopByItem(List<Guid> items, List<Guid> lookup)
     {
         public bool Process()
-        {
-            // sort both lists
-
+        {            
             items.Sort();
             lookup.Sort();
 
-            //for loop to go throu each item
             for (int itemCount = 0; itemCount < items.Count; itemCount++)
             {
                 var currentItem = items[itemCount];

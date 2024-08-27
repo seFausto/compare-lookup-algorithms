@@ -1,10 +1,11 @@
 ﻿using BenchmarkDotNet.Attributes;
 using CompareLookUpAlgorithms;
 
-public class SortListVsDictionaryLookup
+public class SortListVsDictionaryLookupVsOriginal
 {  
     private SortListsAndLoopByItem sortLists;
     private UseDictionaryForLookup useDictionary;
+    private LoopUnsrotedLists original;
 
     [GlobalSetup]
     public void Setup()
@@ -24,9 +25,8 @@ public class SortListVsDictionaryLookup
 
         sortLists = new SortListsAndLoopByItem(items, lookup);
         useDictionary = new UseDictionaryForLookup(items, lookup);
+        original = new LoopUnsrotedLists(items, lookup);
     }
-
-
 
     [Benchmark]
     public bool SortedLists() => sortLists.Process();

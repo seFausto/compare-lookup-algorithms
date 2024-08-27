@@ -4,4 +4,4 @@ using BenchmarkDotNet.Running;
 Console.WriteLine("Hello, World!");
 
 
-var summary = BenchmarkRunner.Run<SortListVsDictionaryLookup>();
+var summary = BenchmarkRunner.Run<SortListVsDictionaryLookupVsOriginal>();
