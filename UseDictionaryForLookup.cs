@@ -12,16 +12,16 @@ namespace CompareLookUpAlgorithms
 
         public bool Process()
         { 
-            var set = new HashSet<Guid>();
+            var dictionary = new Dictionary<Guid,bool>();
 
             foreach (var item in lookup) 
             {
-                set.Add(item);
+                dictionary.Add(item, true);
             }
 
             foreach (var item in items) 
-            { 
-               // Console.WriteLine($"{item} - {set.Contains(item)}");
+            {
+                var test = $"{item} - {dictionary[item]}";
             }
 
             return true;
