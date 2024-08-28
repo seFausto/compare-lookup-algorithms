@@ -5,12 +5,12 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CompareLookUpAlgorithms
+namespace CompareLookUpAlgorithms.TestAlgorithms
 {
     internal class SortListsAndLoopByItem(List<Guid> items, List<Guid> lookup)
     {
         public bool Process()
-        {            
+        {
             items.Sort();
             lookup.Sort();
 

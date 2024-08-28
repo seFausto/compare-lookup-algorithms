@@ -1,5 +1,5 @@
 ﻿using BenchmarkDotNet.Attributes;
-using CompareLookUpAlgorithms;
+using CompareLookUpAlgorithms.TestAlgorithms;
 
 public class SortListVsDictionaryLookupVsOriginal
 {  
@@ -13,7 +13,7 @@ public class SortListVsDictionaryLookupVsOriginal
         var items = new List<Guid>();
         var lookup = new List<Guid>();
 
-        for (int i = 0; i < 1_000_000; i++)
+        for (int i = 0; i < 10_000; i++)
         {
             var guid = Guid.NewGuid();
             items.Add(guid);
@@ -33,4 +33,7 @@ public class SortListVsDictionaryLookupVsOriginal
 
     [Benchmark]
     public bool UseDictionary() => useDictionary.Process();
+
+    [Benchmark]
+    public bool Original() => original.Process();
 }
